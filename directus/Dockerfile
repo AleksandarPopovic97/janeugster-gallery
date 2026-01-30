@@ -11,7 +11,7 @@ RUN npm i -g @directus/extensions-sdk
 COPY ./extensions /directus/extensions
 
 
-# COPY ./schema /directus/schema
+COPY ./schema /directus/schema
 
 # Copy entrypoint last
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
