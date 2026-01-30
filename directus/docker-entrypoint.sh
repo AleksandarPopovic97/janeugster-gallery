@@ -71,11 +71,11 @@ fi
 echo "=> Running Directus core DB migrations..."
 npx directus database migrate:latest
 
-# SCHEMA_FILE="/directus/schema/schema.json"
-# if [ -f "$SCHEMA_FILE" ]; then
-#   echo "=> Applying Directus schema from $SCHEMA_FILE..."
-#   npx directus schema apply "$SCHEMA_FILE" --yes || echo "!!! Schema apply failed, continuing"
-# fi
+SCHEMA_FILE="/directus/schema/schema.json"
+if [ -f "$SCHEMA_FILE" ]; then
+  echo "=> Applying Directus schema from $SCHEMA_FILE..."
+  npx directus schema apply "$SCHEMA_FILE" --yes || echo "!!! Schema apply failed, continuing"
+fi
 
 echo "=> Starting Directus..."
 exec npx directus start
