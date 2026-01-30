@@ -13,7 +13,7 @@ COPY ./extensions /directus/extensions
 
 COPY ./schema /directus/schema
 
-# Copy entrypoint last
+# Copy entrypoint last 
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh
 
