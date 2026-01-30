@@ -7,10 +7,9 @@ USER root
 RUN corepack enable
 RUN npm i -g @directus/extensions-sdk
 
+# Copy extensions source into the image
 COPY ./extensions /directus/extensions
 
-
-# Copy extensions source into the image
 # COPY ./schema /directus/schema
 
 # Copy entrypoint last
